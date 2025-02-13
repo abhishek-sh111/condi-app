@@ -1,7 +1,6 @@
 import React from "react";
 import { Layout, Menu } from "antd";
 import { ShoppingCartOutlined, HomeOutlined, PhoneOutlined } from "@ant-design/icons";
-import "./App.css";
 
 const { Header, Content, Footer } = Layout;
 
