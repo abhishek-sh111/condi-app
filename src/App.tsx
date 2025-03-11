@@ -7,6 +7,7 @@ import {
   PhoneOutlined,
   LogoutOutlined,
   UserOutlined,
+  AudioMutedOutlined,
 } from "@ant-design/icons";
 import Home from "./pages/Home";
 import Cart from "./pages/Cart";
@@ -60,6 +61,8 @@ const App: React.FC = () => {
             { key: "1", icon: <HomeOutlined />, label: <Link to="/">Home</Link> },
             { key: "2", icon: <ShoppingCartOutlined />, label: <Link to="/cart">Cart</Link> },
             { key: "3", icon: <PhoneOutlined />, label: <Link to="/contact">Contact</Link> },
+            { key: "4", icon: <UserOutlined />, label: <Link to="/login">Login</Link> },
+
             ...(isAuthenticated ? [{ key: "4", icon: <UserOutlined />, label: <Link to="/admin">Admin</Link> }] : []),
           ]}
         />
