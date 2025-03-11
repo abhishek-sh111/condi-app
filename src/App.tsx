@@ -79,9 +79,11 @@ const App: React.FC = () => {
           <Route path="/cart" element={<Cart />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/login" element={<Login />} />
-          (isAuthenticated && 
+          {isAuthenticated ? (
             <Route path="/admin" element={<Admin products={products} setProducts={setProducts} />} />
-          )
+          ) : (
+            <Route path="/admin" element={<Login />} />
+          )}
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Content>
